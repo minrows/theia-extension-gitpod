@@ -11,3 +11,8 @@ tasks:
   - init: echo 'Installing Dependencies...'
   - command: npm install -g yo generator-code generator-theia-extension
   - command: echo 'Dependencies Installed!!!'
+
+
+vscode:
+  extensions:
+    - minrows.educode
