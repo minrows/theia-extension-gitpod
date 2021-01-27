@@ -29,8 +29,6 @@
                         "commands": [
                             {
                                 "terminalCommands": [
-                                    "kill -9 $(lsof -t -i:3000)",
-                                    "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
                                     "cd glsp-examples/minimal/client && yarn start:browser"
                                 ]
                             }
@@ -257,7 +255,7 @@
                 },
                 {
                     "button": {
-                        "text": "Build Minimal Example",
+                        "text": "Re-Build Minimal Example",
                         "commands": [
                             {
                                 "terminalCommands": [
