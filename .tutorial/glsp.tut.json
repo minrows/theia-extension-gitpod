@@ -4,15 +4,15 @@
     "tutorialFolder": "glsp-examples",
     "exercises": [
         {
-            "title": "Getting started",
-            "description": "Introduction and set-up",
+            "title": "Introduction and set-up",
+            "description": "Getting started learning the basics of the Eclipse Graphical Language Server Platform (GLSP) and setting up the workspace for the tutorial.",
             "content": [
                 {
                     "html": "<h2>Eclipse Graphical Language Server Platform (GLSP)</h2><br/><p>The Graphical Language Server Platform provides extensible components for the development of diagram editors including edit functionality in (distributed) web-applications via a client-server protocol.</p>"
                 },
                 {
                     "image": {
-                        "src": "https://media.discordapp.net/attachments/776069960371273769/803300788737933403/glsp1.gif",
+                        "src": "https://cdn.discordapp.com/attachments/776069960371273769/803300788737933403/glsp1.gif",
                         "description": "GLSP",
                         "width": "80%"
                     }
@@ -29,7 +29,7 @@
                         "commands": [
                             {
                                 "terminalCommands": [
-                                    "kill -9 $(lsof -t -i:3000",
+                                    "kill -9 $(lsof -t -i:3000)",
                                     "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
                                     "cd glsp-examples/minimal/client && yarn start:browser"
                                 ]
@@ -80,8 +80,8 @@
             ]
         },
         {
-            "title": "Exercise 1",
-            "description": "Modify and add new nodes to the minimal example",
+            "title": "Modify and add nodes",
+            "description": "Learn how to create your custom nodes in the minimal example",
             "content": [
                 {
                     "html": "<p>The minimal example is a very simple starting point to understand the principles of the glsp project.<br/>Right now we have only one node-type which is a plain rectangle that can be resized and deleted.<br><h4>Server part</h4>In this example the server consists of one single bundle with four files. <br>The most important one of those is: <code><i>'MinimalGLSPModule.java'</i></code> which can be found in the 'glsp-examples/minimal/server/org.eclipse.glsp.example.minimal' directory.<br>Let's open it.</p>"
@@ -97,20 +97,20 @@
                     }
                 },
                 {
-                    "html": "<p>Inside of this file you can see the configuration of the server.<br>First of all there is the Model-Factory which is responsible for loading the original models and creating graph models out of them. For simplicity it loads the model from a file.</p>"
+                    "html": "<p>Inside of this file you can see the configuration of the server.<br>First of all there is the <code><i>ModelFactory</i></code> which is responsible for loading the original models and creating graph models out of them. For simplicity it loads the model from a file.</p>"
                 },
                 {
                     "image": {
-                        "src": "https://cdn.discordapp.com/attachments/776069960371273769/803676369186979870/Screenshot_2021-01-26_at_18.21.59.png",
+                        "src": "https://cdn.discordapp.com/attachments/776069960371273769/803890135711219732/unknown.png",
                         "description": "GLSP",
                         "width": "80%"
                     }
                 },
                 {
-                    "html": "<p>Other than that, there is the DiagramConfiguration. It configures editing hints. In this example we have just one node edit-hint.</p>"
+                    "html": "<p>Other than that, there is the <code><i>DiagramConfiguration</i></code>. It configures editing hints. In this example we have just one node edit-hint. We will need to edit this file again once we have created the handler</p>"
                 },
                 {
-                    "html": "<br><h6>CreateNodeOperationHandler</h6><p>The next file represents the actual node. It contains the code which is executed when we add a new node.</p>"
+                    "html": "<br><h4>CreateNodeOperationHandler</h4><p>The next file <code><i>MinimalCreateNodeOperationHandler.java</i></code>represents the actual node. It contains the code which is executed when we add a new node.</p>"
                 },
                 {
                     "button": {
@@ -123,7 +123,7 @@
                     }
                 },
                 {
-                    "html": "<p>As soon as you register a CreateNodeHandler it will appear in the pallet of the Diagram Editor. <br>In this file you can change the look of the node. <br>Try to resize the node by changing one of it's values in the size function.</p>"
+                    "html": "<p>As soon as you register a <code><i>CreateNodeHandler</i></code> it will appear in the pallet of the Diagram Editor. <br>In this file you can change the look of the node. <br>Try to resize the node by changing one of it's values in the size function.</p>"
                 },
                 {
                     "hint": {
@@ -168,18 +168,15 @@
                     }
                 },
                 {
-                    "html": "<p>In here give it a different type name (Exchange the value of DefaultTypes.Node). Also assign a different CSS-class to it. You can use pseudo values like 'new-node' here. And finally assign a different name to the palette label.</p>"
+                    "html": "<p>In here give it a different type name (Exchange the value of <code><i>DefaultTypes.Node</i></code>). Also assign a different CSS-class to it. You can use pseudo values like 'new-node' here. And finally assign a different name to the palette label.</p>"
                 },
                 {
                     "hint": {
                         "text": "Having difficulities?",
                         "content": [
                             {
-                                "html": "<p>Compare the file to a example soulution.</p>"
-                            },
-                            {
                                 "button": {
-                                    "text": "Compare CreateNodeHandler",
+                                    "text": "Compare Node Handler",
                                     "commands": [
                                         {
                                             "fileDiff": {
@@ -194,18 +191,15 @@
                     }
                 },
                 {
-                    "html": "<p>In order to see our new node we have to register this new <i>CreateNewNodeOperationHandler</i> in the module (MinimalGLSPModule.java).</p>"
+                    "html": "<p>In order to see our new node we have to get back to <code><i>MinimalGLSPModule.java</i></code> which we looked at before, to register this new <code><i>CreateNewNodeOperationHandler</i></code>.</p>"
                 },
                 {
                     "hint": {
                         "text": "Having difficulities?",
                         "content": [
                             {
-                                "html": "<p>Compare the file to a example soulution.</p>"
-                            },
-                            {
                                 "button": {
-                                    "text": "Compare GLSPModule",
+                                    "text": "Compare GLSP Module",
                                     "commands": [
                                         {
                                             "fileDiff": {
@@ -220,7 +214,7 @@
                     }
                 },
                 {
-                    "html": "<h4>Client part</h4><p>The client part consist of mostly theia-application configuration and in the package minimal-glsp we have the file 'di.config.ts' that registers all the node types to respective views. This is done by using 'Sprotty'.</p>"
+                    "html": "<br><h4>Client part</h4><p>The client part consist of mostly theia-application configuration and in the package minimal-glsp we have the file 'di.config.ts' that registers all the node types to respective views. This is done by using 'Sprotty'.</p>"
                 },
                 {
                     "button": {
@@ -254,6 +248,22 @@
                                         }
                                     ]
                                 }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "html": "<p>Finally let's rebuild the example:</p>"
+                },
+                {
+                    "button": {
+                        "text": "Build Minimal Example",
+                        "commands": [
+                            {
+                                "terminalCommands": [
+                                    "kill -9 $(lsof -t -i:3000)",
+                                    "cd glsp-examples/minimal/client && yarn start:browser"
+                                ]
                             }
                         ]
                     }
