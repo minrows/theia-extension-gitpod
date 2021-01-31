@@ -11,6 +11,8 @@ tasks:
   - init: echo 'Installing Dependencies...'
   - command: npm install -g yo generator-code generator-theia-extension maven
   - command: echo 'Dependencies Installed!!!'
+  - command: echo "Cloning Exercise Repo..."
+  - command: git clone https://github.com/eclipse-glsp/glsp-examples.git
 
 
 vscode:
