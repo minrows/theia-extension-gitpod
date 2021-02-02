@@ -72,14 +72,15 @@
                     "terminalCommands": [
                         "git clone https://github.com/eclipse-glsp/glsp-examples.git",
                         "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
-                        "cd glsp-examples/minimal/client && yarn"
+                        "cd glsp-examples/minimal/client && yarn",
+                        "cd glsp-examples/minimal/client && yarn start:browser"
                     ]
                 }
             ]
         },
         {
-            "title": "Modify nodes",
-            "description": "Learn how to create your custom nodes in the minimal example",
+            "title": "The MinimalGLSPModule",
+            "description": "Learn how the minimal glsp example is structured and bound together by the MinimalGLSPModule",
             "content": [
                 {
                     "html": "<p>The minimal example is a very simple starting point to understand the principles of the glsp project.<br/>Right now we have only one node-type which is a plain rectangle that can be resized and deleted.<br><h4>Server part</h4>In this example the server consists of one single bundle with four files. <br>The most important one of those is: <code><i>'MinimalGLSPModule.java'</i></code> which can be found in the 'glsp-examples/minimal/server/org.eclipse.glsp.example.minimal' directory.<br>Let's open it.</p>"
@@ -111,10 +112,9 @@
                 
             ]
         },
-
         {
-            "title": "Add nodes",
-            "description": "Learn how to create your custom nodes in the minimal example",
+            "title": "Modify nodes",
+            "description": "Learn how to modify existing nodes in the minimal example",
             "content": [
                 {
                     "html": "<br><h4>CreateNodeOperationHandler</h4><p>The next file <code><i>MinimalCreateNodeOperationHandler.java</i></code>represents the actual node. It contains the code which is executed when we add a new node.</p>"
@@ -150,16 +150,44 @@
                     }
                 },
                 {
+                    "html": "<p>In order to see the changes let's rebuild the example:</p>"
+                },
+                {
+                    "button": {
+                        "text": "Re-Build Minimal Example",
+                        "commands": [
+                            {
+                                "terminalCommands": [
+                                    "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
+                                    "cd glsp-examples/minimal/client/minimal-theia && yarn copy:server",
+                                    "kill -9 $(lsof -t -i:3000)",
+                                    "kill -9 $(lsof -t -i:5013)",
+                                    "cd glsp-examples/minimal/client && yarn start:browser"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Add nodes ",
+            "description": "Learn how to create your custom nodes in the minimal example",
+            "content": [
+                {
                     "html": "<p>Now we want to create another node. The easiest way to create another node type is to simply duplicate the file MinimalCreateNodeOperationHandler.java and call it say MinimalCreateNewNodeOperationHandler.java</p>"
                 },
                 {
                     "button": {
-                        "text": "Duplicate file",
+                        "text": "Create new Handler",
                         "commands": [
                             {
                                 "terminalCommands": [
                                     "cp glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java"
                                 ]
+                            },
+                            {
+                                "openFile": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java"
                             }
                         ]
                     }
@@ -219,14 +247,7 @@
                             }
                         ]
                     }
-                }
-            ]
-        },
-        {
-            "title": "Client part",
-            "description": "Learn how to create your custom nodes in the minimal example",
-            "content": [
-                
+                },
                 {
                     "html": "<br><h4>Client part</h4><p>The client part consist of mostly theia-application configuration and in the package minimal-glsp we have the file 'di.config.ts' that registers all the node types to respective views. This is done by using 'Sprotty'.</p>"
                 },
@@ -275,7 +296,9 @@
                         "commands": [
                             {
                                 "terminalCommands": [
+                                    "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
                                     "kill -9 $(lsof -t -i:3000)",
+                                    "kill -9 $(lsof -t -i:5013)",
                                     "cd glsp-examples/minimal/client && yarn start:browser"
                                 ]
                             }
