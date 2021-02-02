@@ -4,15 +4,16 @@ image:
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
+    onOpen: open-browser
   - port: 5013
-    onOpen: open-preview
+    onOpen: ignore
+    
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: npm install -g yo generator-code generator-theia-extension maven
   - init: git clone https://github.com/eclipse-glsp/glsp-examples.git
-  - init: cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install
-  - command: cd glsp-examples/minimal/client && yarn
+    init: cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install
+    init: cd glsp-examples/minimal/client && yarn
 
 vscode:
   extensions:
