@@ -9,12 +9,10 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'Installing Dependencies...'
   - command: npm install -g yo generator-code generator-theia-extension maven
-  - command: echo 'Dependencies Installed!!!'
-  - command: echo "Cloning Exercise Repo..."
   - command: git clone https://github.com/eclipse-glsp/glsp-examples.git
-
+  - command: cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install
+  - command: cd glsp-examples/minimal/client && yarn
 
 vscode:
   extensions:
