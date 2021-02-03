@@ -350,7 +350,9 @@
             "solve": [
                 {
                     "terminalCommands": [
-                        "cp .tutorial/solution/MinimalCreateNodeOperationHandler.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
+                        "cp .tutorial/solution/MinimalCreateNewNodeOperationHandler.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java",
+                        "cp .tutorial/solution/MinimalGLSPModule.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalGLSPModule.java",
+                        "cp .tutorial/solution/di.config.ts glsp-examples/minimal/client/minimal-glsp/src/di.config.ts",
                         "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
                         "cd glsp-examples/minimal/client/minimal-theia && yarn copy:server",
                         "kill -9 $(lsof -t -i:3000)",
