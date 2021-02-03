@@ -354,7 +354,7 @@
                         "cp .tutorial/solution/MinimalGLSPModule.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalGLSPModule.java",
                         "cp .tutorial/solution/di.config.ts glsp-examples/minimal/client/minimal-glsp/src/di.config.ts",
                         "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
-                        "cd glsp-examples/minimal/client/minimal-theia && yarn copy:server",
+                        "cd glsp-examples/minimal/client && yarn",
                         "kill -9 $(lsof -t -i:3000)",
                         "kill -9 $(lsof -t -i:5013)",
                         "cd glsp-examples/minimal/client && yarn start:browser"
