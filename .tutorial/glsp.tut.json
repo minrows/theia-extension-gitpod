@@ -21,7 +21,7 @@
                     "html": "<p>The Eclipse GLSP Project provides you with:<ul><li>Java-based server framework</li><ul><li>Standalone server implementation</li></ul><li>Graphical Language Server Protocol</li><ul><li>Web-based Client framework</li></ul><li>IDE / Tool platform integration</li><ul><li>Theia, VSCode and Eclipse</li></ul></ul></p>"
                 },
                 {
-                    "html": "<h3>Setup workspace</h3><p>In order to get started please clone the <a href='https://github.com/eclipse-glsp/glsp-examples.git'>GLSP Repository</a> and run <br><code>cd minimal<br>cd server/org.eclipse.glsp.example.minimal && mvn clean install && cd ../..<br>cd client && yarn && cd ..</code><br>from the terminal</p><p>You can also click on 'SOLVE' at the bottom to do this automatically</p><p>After that, to run the minimal example click on the button below or run the following commands in the terminal<br><code>cd minimal/client<br>yarn start:browser</code></p>"
+                    "html": "<h3>Setup workspace</h3><p>As you can see the <code><i>glsp-examles</i></code> folder has already been cloned into your workspace we have also run <code><i>mvn clean install</i></code> and <code><i>yarn</i></code> in the server and client respectively. If you want to do these steps by yourself on another workspace please follow these steps:<br>Clone <a href='https://github.com/eclipse-glsp/glsp-examples.git'>GLSP Repository</a> and run <br><code>cd minimal<br>cd server/org.eclipse.glsp.example.minimal && mvn clean install && cd ../..<br>cd client && yarn && cd ..</code><br>from the terminal</p><p>You can also click on 'SOLVE' at the bottom to do this automatically if you decide to start off again.</p><p>After that, to run the minimal example click on the button below or run the following commands in the terminal.<br><code>cd minimal/client<br>yarn start:browser</code></p>"
                 },
                 {
                     "button": {
@@ -36,7 +36,7 @@
                     }
                 },
                 {
-                    "html": "<p>You should now be able to see the example on localhost:3000 inside your browser.</p>"
+                    "html": "<p>You should now be able to see the result of the example on Port 3000.</p>"
                 }
             ],
             "cleanState": [
@@ -72,8 +72,7 @@
                     "terminalCommands": [
                         "git clone https://github.com/eclipse-glsp/glsp-examples.git",
                         "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
-                        "cd glsp-examples/minimal/client && yarn",
-                        "cd glsp-examples/minimal/client && yarn start:browser"
+                        "cd glsp-examples/minimal/client && yarn"
                     ]
                 }
             ]
@@ -108,8 +107,6 @@
                 {
                     "html": "<p>Other than that, there is the <code><i>DiagramConfiguration</i></code>. It configures editing hints. In this example we have just one node edit-hint. We will need to edit this file again once we have created the handler</p>"
                 }
-                
-                
             ]
         },
         {
@@ -167,6 +164,34 @@
                             }
                         ]
                     }
+                }
+            ],
+            "test": [
+                {
+                    "tests": [
+                        {
+                            "text": "MinimalCreateNodeOperationHandler.java",
+                            "type": "contentCheck",
+                            "filename": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java",
+                            "contains": [
+                                ".size(20, 20)"
+                            ],
+                            "testName": "Testing file MinimalCreateNodeOperationHandler"
+                            
+                        }
+                    ]
+                }
+            ],
+            "solve": [
+                {
+                    "terminalCommands": [
+                        "cp .tutorial/solution/MinimalCreateNodeOperationHandler.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
+                        "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
+                        "cd glsp-examples/minimal/client/minimal-theia && yarn copy:server",
+                        "kill -9 $(lsof -t -i:3000)",
+                        "kill -9 $(lsof -t -i:5013)",
+                        "cd glsp-examples/minimal/client && yarn start:browser"
+                    ]
                 }
             ]
         },
@@ -304,6 +329,34 @@
                             }
                         ]
                     }
+                }
+            ],
+            "test": [
+                {
+                    "tests": [
+                        {
+                            "text": "MinimalCreateNodeOperationHandler.java",
+                            "type": "contentCheck",
+                            "filename": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java",
+                            "contains": [
+                                ".size(20, 20)"
+                            ],
+                            "testName": "Testing file MinimalCreateNodeOperationHandler"
+                            
+                        }
+                    ]
+                }
+            ],
+            "solve": [
+                {
+                    "terminalCommands": [
+                        "cp .tutorial/solution/MinimalCreateNodeOperationHandler.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
+                        "cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
+                        "cd glsp-examples/minimal/client/minimal-theia && yarn copy:server",
+                        "kill -9 $(lsof -t -i:3000)",
+                        "kill -9 $(lsof -t -i:5013)",
+                        "cd glsp-examples/minimal/client && yarn start:browser"
+                    ]
                 }
             ]
         }
