@@ -41,6 +41,8 @@ import {
     paletteModule,
     RectangularNode,
     RectangularNodeView,
+    CircularNode,
+    CircularNodeView,
     routingModule,
     SGraphView,
     toolFeedbackModule,
