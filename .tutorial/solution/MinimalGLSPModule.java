@@ -15,6 +15,7 @@
  ********************************************************************************/
 package org.eclipse.glsp.example.minimal;
 
+import org.eclipse.glsp.example.minimal.handler.MinimalCreateNewNodeOperationHandler;
 import org.eclipse.glsp.example.minimal.handler.MinimalCreateNodeOperationHandler;
 import org.eclipse.glsp.server.di.DefaultGLSPModule;
 import org.eclipse.glsp.server.diagram.DiagramConfiguration;

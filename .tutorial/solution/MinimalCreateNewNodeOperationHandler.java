@@ -26,7 +26,7 @@ import org.eclipse.glsp.server.operations.gmodel.CreateNodeOperationHandler;
 
 public class MinimalCreateNewNodeOperationHandler extends CreateNodeOperationHandler {
 
-   public MinimalCreateNodeOperationHandler() {
+   public MinimalCreateNewNodeOperationHandler() {
       super("new-node");
    }
 
