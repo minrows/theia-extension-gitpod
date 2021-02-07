@@ -17,3 +17,7 @@ tasks:
 vscode:
   extensions:
     - minrows.educode
+
+github:
+  prebuilds:
+    master: true
