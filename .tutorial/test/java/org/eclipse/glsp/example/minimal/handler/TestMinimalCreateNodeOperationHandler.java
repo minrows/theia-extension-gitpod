@@ -39,10 +39,9 @@ public class TestMinimalCreateNodeOperationHandler {
    @Test
    public void testNodeSize() {
       Optional<GPoint> point = Optional.empty();
-      System.out.println(nodeHandler.toString());
-      System.out.println(nodeHandler.createNode(point, null).getSize().getHeight());
+
       assertEquals(nodeHandler.createNode(point, null).getSize().getHeight(), 20);
-      assertEquals(nodeHandler.createNode(point, null).getSize().getWidth(), 40);
+      assertEquals(nodeHandler.createNode(point, null).getSize().getWidth(), 20);
       
    }
 
