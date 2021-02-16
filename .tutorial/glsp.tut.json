@@ -178,10 +178,50 @@
 							}
 						]
 					}
+				},
+				{
+					"button": {
+						"text": "Provide Assistance",
+						"commands": [
+							{
+								"assistance": {
+									"workspace": "glsp-examples/minimal/client/workspace",
+									"elements": [
+										"shell-tab-explorer-view-container",
+										"example.minimal",
+										"Minimal Node"
+									]
+								}
+							}
+						]
+					}
 				}
 			],
 			"test": [
 				{
+					"tests": [
+						{
+							"testName": "Checking files in current directory",
+							"command": {
+								"checkIfFilesExist": [
+									"glsp-examples/.gitignore",
+									"glsp-examples/README.md",
+									"glsp-examples/CONTRIBUTING.md",
+									"glsp-examples/Jenkinsfile",
+									"glsp-examples/LICENSE",
+									"glsp-examples/minimal/client/workspace/example.minimal",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalDiagramConfiguration.java",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalGLSPModule.java",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalServerLauncher.java"
+								]
+							}
+						}
+					]
+				},
+				{
+					"fileName": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
+					"solution": ".tutorial/solution/MinimalCreateNodeOperationHandler.java",
 					"tests": [
 						{
 							"testName": "Running Unit Test",
@@ -247,7 +287,6 @@
 						]
 					}
 				},
-
 				{
 					"html": "<p>In here give it a different type name (Exchange the value of <code><i>DefaultTypes.Node</i></code>). Also assign a different CSS-class to it. You can use pseudo values like 'new-node' here. And finally assign a different name to the palette label.</p>"
 				},
@@ -366,7 +405,9 @@
 							"text": "MinimalCreateNodeOperationHandler.java",
 							"type": "contentCheck",
 							"filename": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java",
-							"contains": [".size(20, 20)"],
+							"contains": [
+								".size(20, 20)"
+							],
 							"testName": "Testing file MinimalCreateNodeOperationHandler"
 						}
 					]
@@ -386,10 +427,6 @@
 					]
 				}
 			]
-		},
-		{
-			"title": "Finish",
-			"description": ""
 		}
 	]
 }
