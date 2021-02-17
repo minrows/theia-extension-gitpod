@@ -12,7 +12,7 @@ tasks:
   - init: git clone https://github.com/LukasBoll/glsp-examples.git
     command: >
       cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install &&
-      cd ../../client && yarn && 
+      cd ../../client && yarn && cd ../../.. &&
       cp -r .tutorial/test/ ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/ && cp .tutorial/pom.xml ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/
 
 vscode:
