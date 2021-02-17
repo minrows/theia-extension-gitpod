@@ -17,7 +17,7 @@ tasks:
 
 vscode:
   extensions:
-    - minrows.educode
+    - minrows.educode@0.0.8
 
 github:
   prebuilds:
