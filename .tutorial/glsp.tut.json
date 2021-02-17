@@ -264,12 +264,8 @@
 				{
 					"terminalCommands": [
 						"cp .tutorial/solution/MinimalCreateNodeOperationHandler.java glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
-						"cp -r .tutorial/test/ ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/ && cp .tutorial/pom.xml ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/",
 						"cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install",
-						"cd glsp-examples/minimal/client/minimal-theia && yarn copy:server",
-						"kill -9 $(lsof -t -i:3000)",
-						"kill -9 $(lsof -t -i:5013)",
-						"cd glsp-examples/minimal/client && yarn start:browser"
+						"cd glsp-examples/minimal/client/minimal-theia && yarn copy:server"
 					]
 				}
 			]
