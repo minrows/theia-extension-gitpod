@@ -100,6 +100,7 @@
 						"text": "Can't find it?",
 						"content": [
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -145,6 +146,7 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -167,9 +169,11 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Html",
 								"html": "<p>Change the first value (40) to say, 20 a nd check if it changes when you add a new node.</p>"
 							},
 							{
+								"typeId": "Image",
 								"image": {
 									"src": "https://cdn.discordapp.com/attachments/776069960371273769/803676369186979870/Screenshot_2021-01-26_at_18.21.59.png",
 									"description": "GLSP",
@@ -285,6 +289,7 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Create new Handler",
 									"commands": [
@@ -323,6 +328,7 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Compare Node Handler",
 									"commands": [
@@ -348,6 +354,7 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Compare GLSP Module",
 									"commands": [
@@ -373,6 +380,7 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -395,9 +403,11 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
+								"typeId": "Html",
 								"html": "<p>Compare the file to a example soulution.</p>"
 							},
 							{
+								"typeId": "Command Button",
 								"button": {
 									"text": "Compare di.config.ts",
 									"commands": [
