@@ -10,27 +10,26 @@
 			"typeId": "#exercise",
 			"content": [
 				{
-					"typeId": "Html",
-					"html": "<h2>Eclipse Graphical Language Server Platform (GLSP)</h2><br/><p>The Graphical Language Server Platform provides extensible components for the development of diagram editors including edit functionality in (distributed) web-applications via a client-server protocol.</p>"
+					"html": "<h2>Eclipse Graphical Language Server Platform (GLSP)</h2><br/><p>The Graphical Language Server Platform provides extensible components for the development of diagram editors including edit functionality in (distributed) web-applications via a client-server protocol.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Image",
 					"image": {
 						"src": "https://cdn.discordapp.com/attachments/776069960371273769/803300788737933403/glsp1.gif",
 						"description": "GLSP",
 						"width": "80%"
-					}
+					},
+					"typeId": "Image"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>The Eclipse GLSP Project provides you with:<ul><li>Java-based server framework</li><ul><li>Standalone server implementation</li></ul><li>Graphical Language Server Protocol</li><ul><li>Web-based Client framework</li></ul><li>IDE / Tool platform integration</li><ul><li>Theia, VSCode and Eclipse</li></ul></ul></p>"
+					"html": "<p>The Eclipse GLSP Project provides you with:<ul><li>Java-based server framework</li><ul><li>Standalone server implementation</li></ul><li>Graphical Language Server Protocol</li><ul><li>Web-based Client framework</li></ul><li>IDE / Tool platform integration</li><ul><li>Theia, VSCode and Eclipse</li></ul></ul></p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Html",
-					"html": "<h3>Setup workspace</h3><p>As you can see the <code><i>glsp-examles</i></code> folder has already been cloned into your workspace we have also run <code><i>mvn clean install</i></code> and <code><i>yarn</i></code> in the server and client respectively. If you want to do these steps by yourself on another workspace please follow these steps:<br>Clone <a href='https://github.com/eclipse-glsp/glsp-examples.git'>GLSP Repository</a> and run <br><code>cd minimal<br>cd server/org.eclipse.glsp.example.minimal && mvn clean install && cd ../..<br>cd client && yarn && cd ..</code><br>from the terminal</p><p>You can also click on 'SOLVE' at the bottom to do this automatically if you decide to start off again.</p><p>After that, to run the minimal example click on the button below or run the following commands in the terminal.<br><code>cd minimal/client<br>yarn start:browser</code></p>"
+					"html": "<h3>Setup workspace</h3><p>As you can see the <code><i>glsp-examles</i></code> folder has already been cloned into your workspace we have also run <code><i>mvn clean install</i></code> and <code><i>yarn</i></code> in the server and client respectively. If you want to do these steps by yourself on another workspace please follow these steps:<br>Clone <a href='https://github.com/eclipse-glsp/glsp-examples.git'>GLSP Repository</a> and run <br><code>cd minimal<br>cd server/org.eclipse.glsp.example.minimal && mvn clean install && cd ../..<br>cd client && yarn && cd ..</code><br>from the terminal</p><p>You can also click on 'SOLVE' at the bottom to do this automatically if you decide to start off again.</p><p>After that, to run the minimal example click on the button below or run the following commands in the terminal.<br><code>cd minimal/client<br>yarn start:browser</code></p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Command Button",
 					"button": {
 						"text": "Build Minimal Example",
 						"commands": [
@@ -40,11 +39,12 @@
 								]
 							}
 						]
-					}
+					},
+					"typeId": "Command Button"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>You should now be able to see the result of the example on Port 3000.</p>"
+					"html": "<p>You should now be able to see the result of the example on Port 3000.</p>",
+					"typeId": "Html"
 				}
 			],
 			"cleanState": [
@@ -91,16 +91,14 @@
 			"typeId": "#exercise",
 			"content": [
 				{
-					"typeId": "Html",
-					"html": "<p>The minimal example is a very simple starting point to understand the principles of the glsp project.<br/>Right now we have only one node-type which is a plain rectangle that can be resized and deleted.<br><h4>Server part</h4>In this example the server consists of one single bundle with four files. <br>The most important one of those is: <code><i>'MinimalGLSPModule.java'</i></code> which can be found in the 'glsp-examples/minimal/server/org.eclipse.glsp.example.minimal' directory.<br>Let's open it. Please open the file now.</p>"
+					"html": "<p>The minimal example is a very simple starting point to understand the principles of the glsp project.<br/>Right now we have only one node-type which is a plain rectangle that can be resized and deleted.<br><h4>Server part</h4>In this example the server consists of one single bundle with four files. <br>The most important one of those is: <code><i>'MinimalGLSPModule.java'</i></code> which can be found in the 'glsp-examples/minimal/server/org.eclipse.glsp.example.minimal' directory.<br>Let's open it. Please open the file now.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Can't find it?",
 						"content": [
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -108,26 +106,28 @@
 											"openFile": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalGLSPModule.java"
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>Inside of this file you can see the configuration of the server.<br>First of all there is the <code><i>ModelFactory</i></code> which is responsible for loading the original models and creating graph models out of them. For simplicity it loads the model from a file.</p>"
+					"html": "<p>Inside of this file you can see the configuration of the server.<br>First of all there is the <code><i>ModelFactory</i></code> which is responsible for loading the original models and creating graph models out of them. For simplicity it loads the model from a file.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Image",
 					"image": {
 						"src": "https://cdn.discordapp.com/attachments/776069960371273769/803890135711219732/unknown.png",
 						"description": "GLSP",
 						"width": "80%"
-					}
+					},
+					"typeId": "Image"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>Other than that, there is the <code><i>DiagramConfiguration</i></code>. It configures editing hints. In this example we have just one node edit-hint. We will need to edit this file again once we have created the handler</p>"
+					"html": "<p>Other than that, there is the <code><i>DiagramConfiguration</i></code>. It configures editing hints. In this example we have just one node edit-hint. We will need to edit this file again once we have created the handler</p>",
+					"typeId": "Html"
 				}
 			]
 		},
@@ -137,16 +137,14 @@
 			"typeId": "#exercise",
 			"content": [
 				{
-					"typeId": "Html",
-					"html": "<br><h4>CreateNodeOperationHandler</h4><p>The next file <code><i>MinimalCreateNodeOperationHandler.java</i></code> represents the actual node. It contains the code which is executed when we add a new node.</p>"
+					"html": "<br><h4>CreateNodeOperationHandler</h4><p>The next file <code><i>MinimalCreateNodeOperationHandler.java</i></code> represents the actual node. It contains the code which is executed when we add a new node.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -154,41 +152,42 @@
 											"openFile": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java"
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>As soon as you register a <code><i>CreateNodeHandler</i></code> it will appear in the pallet of the Diagram Editor. <br>In this file you can change the look of the node. <br>Try to resize the node by changing one of it's values in the size function.</p>"
+					"html": "<p>As soon as you register a <code><i>CreateNodeHandler</i></code> it will appear in the pallet of the Diagram Editor. <br>In this file you can change the look of the node. <br>Try to resize the node by changing one of it's values in the size function.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"typeId": "Html",
-								"html": "<p>Change the first value (40) to say, 20 a nd check if it changes when you add a new node.</p>"
+								"html": "<p>Change the first value (40) to say, 20 a nd check if it changes when you add a new node.</p>",
+								"typeId": "Html"
 							},
 							{
-								"typeId": "Image",
 								"image": {
 									"src": "https://cdn.discordapp.com/attachments/776069960371273769/803676369186979870/Screenshot_2021-01-26_at_18.21.59.png",
 									"description": "GLSP",
 									"width": "80%"
-								}
+								},
+								"typeId": "Image"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>In order to see the changes let's rebuild the example:</p>"
+					"html": "<p>In order to see the changes let's rebuild the example:</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Command Button",
 					"button": {
 						"text": "Re-Build Minimal Example",
 						"commands": [
@@ -202,10 +201,10 @@
 								]
 							}
 						]
-					}
+					},
+					"typeId": "Command Button"
 				},
 				{
-					"typeId": "Command Button",
 					"button": {
 						"text": "Provide Assistance",
 						"commands": [
@@ -220,7 +219,8 @@
 								}
 							}
 						]
-					}
+					},
+					"typeId": "Command Button"
 				}
 			],
 			"test": [
@@ -280,16 +280,14 @@
 			"typeId": "#exercise",
 			"content": [
 				{
-					"typeId": "Html",
-					"html": "<p>Now we want to create another node. The easiest way to create another node type is to simply duplicate the file MinimalCreateNodeOperationHandler.java and call it say MinimalCreateNewNodeOperationHandler.java</p>"
+					"html": "<p>Now we want to create another node. The easiest way to create another node type is to simply duplicate the file MinimalCreateNodeOperationHandler.java and call it say MinimalCreateNewNodeOperationHandler.java</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Create new Handler",
 									"commands": [
@@ -302,10 +300,10 @@
 											"openFile": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java"
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							},
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -313,22 +311,22 @@
 											"openFile": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java"
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>In here give it a different type name (Exchange the value of <code><i>DefaultTypes.Node</i></code>). Also assign a different CSS-class to it. You can use pseudo values like 'new-node' here. And finally assign a different name to the palette label.</p>"
+					"html": "<p>In here give it a different type name (Exchange the value of <code><i>DefaultTypes.Node</i></code>). Also assign a different CSS-class to it. You can use pseudo values like 'new-node' here. And finally assign a different name to the palette label.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Compare Node Handler",
 									"commands": [
@@ -339,17 +337,18 @@
 											}
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>In order to see our new node we have to get back to <code><i>MinimalGLSPModule.java</i></code> which we looked at before, to register this new <code><i>CreateNewNodeOperationHandler</i></code>.</p>"
+					"html": "<p>In order to see our new node we have to get back to <code><i>MinimalGLSPModule.java</i></code> which we looked at before, to register this new <code><i>CreateNewNodeOperationHandler</i></code>.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
@@ -368,19 +367,18 @@
 								}
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<br><h4>Client part</h4><p>The client part consist of mostly theia-application configuration and in the package minimal-glsp we have the file 'di.config.ts' that registers all the node types to respective views. This is done by using 'Sprotty'.</p>"
+					"html": "<br><h4>Client part</h4><p>The client part consist of mostly theia-application configuration and in the package minimal-glsp we have the file 'di.config.ts' that registers all the node types to respective views. This is done by using 'Sprotty'.</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Open File",
 									"commands": [
@@ -388,26 +386,26 @@
 											"openFile": "glsp-examples/minimal/client/minimal-glsp/src/di.config.ts"
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>So lets add our new node to the Diagram Module by adding a function call of <code>configureModelElement()</code> with our node-name in it. Let's also change the RectangularNode to CircularNode</p>"
+					"html": "<p>So lets add our new node to the Diagram Module by adding a function call of <code>configureModelElement()</code> with our node-name in it. Let's also change the RectangularNode to CircularNode</p>",
+					"typeId": "Html"
 				},
 				{
-					"typeId": "Hint",
 					"hint": {
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"typeId": "Html",
-								"html": "<p>Compare the file to a example soulution.</p>"
+								"html": "<p>Compare the file to a example soulution.</p>",
+								"typeId": "Html"
 							},
 							{
-								"typeId": "Command Button",
 								"button": {
 									"text": "Compare di.config.ts",
 									"commands": [
@@ -418,14 +416,16 @@
 											}
 										}
 									]
-								}
+								},
+								"typeId": "Command Button"
 							}
 						]
-					}
+					},
+					"typeId": "Hint"
 				},
 				{
-					"typeId": "Html",
-					"html": "<p>Finally let's rebuild the example:</p>"
+					"html": "<p>Finally let's rebuild the example:</p>",
+					"typeId": "Html"
 				}
 			],
 			"test": [
