@@ -85,7 +85,7 @@
 			"typeId": "#exercise",
 			"content": [
 				{
-					"html": "<p>The minimal example is a very simple starting point to understand the principles of the glsp project.<br/>Right now we have only one node-type which is a plain rectangle that can be resized and deleted.<br><h4>Server part</h4>In this example the server consists of one single bundle with four files. <br>The most important one of those is: <code><i>'MinimalGLSPModule.java'</i></code> which can be found in the 'glsp-examples/minimal/server/org.eclipse.glsp.example.minimal' directory.<br>Let's open it. Please open the file now.</p>"
+					"html": "<p>The minimal example is a very simple starting point to understand the principles of the glsp project.<br />Right now we have only one node-type which is a plain rectangle that can be resized and deleted.<br /></p><h4>Server part</h4><p>In this example the server consists of one single bundle with four files. <br />The most important one of those is: <code><i>'MinimalGLSPModule.java'</i></code> which can be found in the 'glsp-examples/minimal/server/org.eclipse.glsp.example.minimal' directory.<br />Let's open it. Please open the file now.</p>"
 				},
 				{
 					"hint": {
@@ -152,7 +152,7 @@
 						"text": "Having difficulities?",
 						"content": [
 							{
-								"html": "<p>Change the first value (40) to say, 20 a nd check if it changes when you add a new node.</p>"
+								"html": "<p>Change the first value (40) to say, 20 and check if it changes when you add a new node.</p>"
 							},
 							{
 								"image": {
@@ -274,16 +274,6 @@
 										}
 									]
 								}
-							},
-							{
-								"button": {
-									"text": "Open File",
-									"commands": [
-										{
-											"openFile": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java"
-										}
-									]
-								}
 							}
 						]
 					}
@@ -381,20 +371,28 @@
 					}
 				},
 				{
-					"html": "<p>Finally let's rebuild the example:</p>"
+					"html": "<p>Finally, let's rebuild the example:</p>"
 				}
 			],
 			"test": [
 				{
 					"tests": [
 						{
-							"text": "MinimalCreateNodeOperationHandler.java",
-							"type": "contentCheck",
-							"filename": "glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNewNodeOperationHandler.java",
-							"contains": [
-								".size(20, 20)"
-							],
-							"testName": "Testing file MinimalCreateNodeOperationHandler"
+							"testName": "Checking files in current directory",
+							"command": {
+								"checkIfFilesExist": [
+									"glsp-examples/.gitignore",
+									"glsp-examples/README.md",
+									"glsp-examples/CONTRIBUTING.md",
+									"glsp-examples/Jenkinsfile",
+									"glsp-examples/LICENSE",
+									"glsp-examples/minimal/client/workspace/example.minimal",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/handler/MinimalCreateNodeOperationHandler.java",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalDiagramConfiguration.java",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalGLSPModule.java",
+									"glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/main/java/org/eclipse/glsp/example/minimal/MinimalServerLauncher.java"
+								]
+							}
 						}
 					]
 				}
