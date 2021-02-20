@@ -9,7 +9,7 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: git clone https://github.com/LukasBoll/glsp-examples.git && cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install && cd ../../client && yarn && cd ../../.. && cp -r .tutorial/test/ ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/ && cp .tutorial/pom.xml ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/
+  - prebuild: git clone https://github.com/LukasBoll/glsp-examples.git && cd glsp-examples/minimal/server/org.eclipse.glsp.example.minimal && mvn clean install && cd ../../client && yarn && cd ../../.. && cp -r .tutorial/test/ ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/src/ && cp .tutorial/pom.xml ./glsp-examples/minimal/server/org.eclipse.glsp.example.minimal/
 
 vscode:
   extensions:
